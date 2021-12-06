@@ -1,5 +1,13 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+        adresse_ville: '10 Cour André L2O'
+        ville_habite: 'Savigny-le-temple'
+        adresse_mail: 'c.cedric.martin@gmail.com'
+        numero_telephone: '06.70.97.66.40'
+        cod_postal: '77176'
+        copyright: 'Copyright © 2021 - Cédric Martin'
+    form_themes: ['bootstrap_5_layout.html.twig']
 
 when@test:
     twig:

@@ -36,9 +36,10 @@ a {
 
 /* ******************** HOME - HEADER ******************** */
 
-#home-header #header-img {
+#images {
     width: 100vw;
     height: 100vh;
+    min-height: 30vh;
     background-image: url('../img/backgroundimage.jpg');
     background-size: cover;
     background-position: center;

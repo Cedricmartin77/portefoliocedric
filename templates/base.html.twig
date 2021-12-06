@@ -40,11 +40,26 @@
     <div class="row bg-dark">
       <div class="col-md-6 p-5"></div>
       <a>
-        <img src="../public/img/logosite/logodokkan .png" alt="Logo Dokkan Battle France " id="images2" />
+        <img
+          src="../public/img/logosite/logodokkan .png"
+          alt="Logo Dokkan Battle France "
+          id="images2"
+        />
       </a>
       <div class="mt-3 text-light">
-          <h3>Dokkan Battle | France </h3>
-          <h4>Site communautaire regroupeant tout le savoir sur le jeux Dragon Ball Z : Dokkan Battle</h4>
+        <h3 id="text1">Dokkan Battle | France</h3>
+        <h4 id="text2">
+          Site communautaire regroupeant tout le savoir sur le jeux Dragon Ball
+          Z : Dokkan Battle
+        </h4>
+      </div>
+    </div>
+
+    <div id="competence" class="container-fluid bg-dark text-light">
+      <div class="row">
+        <div class="col-12 my-auto">
+          <h2 id="p-5">Compétences</h2>
+        </div>
       </div>
     </div>
 
@@ -52,24 +67,29 @@
       <div class="row text-center p-5">
         <h5>Les Liens Utiles</h5>
         <div class="dropdown-divider"></div>
-        <p><a href="{{ path('accueil') }}">Accueil</a></p>
+        <p><a href="{{ path('accueil') }}">Hauts de page</a></p>
+        <p><a href="{{ path('accueil') }}">¨Projets</a></p>
+        <p><a href="{{ path('accueil') }}">Compétences</a></p>
+        <p><a href="{{ path('accueil') }}">A propos</a></p>
       </div>
 
-      <div class="col-4">
-        <h5>COORDONNÉES</h5>
-        <div class="dropdown-divider"></div>
-        <p>{{ adresse_ville }}</p>
-        <p>{{ ville_habite }} {{ code_postal }}</p>
-        <p>{{ numero_telephone }}</p>
-        <p>{{ adresse_mail }}</p>
-      </div>
-      <div class="col-4 my-auto">
-        <img
-          src="{{ asset('img/logosite/logoportefolio.png') }}"
-          alt="logo portefolio cedric"
-          class="w-50"
-        />
-      </div>
+        <div class="col-4">
+          <h5>COORDONNÉES</h5>
+          <div class="dropdown-divider"></div>
+          <p>{{ adresse_ville }}</p>
+          <p>{{ ville_habite }} {{ code_postal }}</p>
+          <p>{{ numero_telephone }}</p>
+          <p>{{ adresse_mail }}</p>
+        </div>
+        <div class="col-4 my-auto">
+          <img
+            src="{{ asset('img/logosite/logoportefolio.png') }}"
+            alt="logo portefolio cedric"
+            class="w-50"
+          />
+        </div>
+        
+
       <div class="row" id="copyright">
         <div class="col-12 text-center">
           <p>{{ copyright }}</p>

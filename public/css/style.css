@@ -59,3 +59,8 @@ a {
     #home-header h2 {
         top: 91%;
     }
+
+    #projets{
+        background: #212529;
+        color: white;
+    }

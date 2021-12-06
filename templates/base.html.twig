@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="porte folio Cédric">
-        <meta name="author" content="Cédric MARTIN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="porte folio Cédric" />
+    <meta name="author" content="Cédric MARTIN" />
 
-        <title>{% block title %}Porte Folio de Cédric Martin{% endblock %}</title>
+    <title>{% block title %}Porte Folio de Cédric Martin{% endblock %}</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-       
-        {% block stylesheets %}{% endblock %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
-    </head>
-  
-    <body>
-        {% block body %}{% endblock %}
-        <footer class="container-fluid bg-dark text-light">
-            <div class="row text-center p-5">
-                <h5>Les Liens Utiles</h5>
-                <div class="dropdown-divider"></div>
-                    <p><a href="{{ path('accueil') }}">Accueil</a></p>
-            </div>
-            <div class="col-4 my-auto">
-                <img src="{{ asset('img/logosite/logoportefolio.png') }}" alt="logo portefolio cedric" class="w-100">
-            </div>
-            <div class="col-4">
-                <h5>COORDONNÉES</h5>
-                <div class="dropdown-divider"></div>
-                <p>{{ adresse_ville }}</p>
-                <p>{{ ville_habite }} {{ code_postal }}</p>
-                <p>{{ numero_telephone }}</p>
-                <p>{{ adresse_mail }}</p>
-            </div>
-            <div class="row" id="copyright">
-                <div class="col-12 text-center">
-                    <p>{{ copyright }}</p>
-                </div>
-            </div>
+    {% block stylesheets %}{% endblock %}
+  </head>
 
-        </footer>
+  <body>
+    {% block body %}{% endblock %}
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ asset('js/script.js') }}"></script>
+    <ul class="nav justify-content-center bg-dark">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Projets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Compétence</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">A propose de moi </a>
+      </li>
+    </ul>
 
-        {% block javascripts %}{% endblock %}
-    </body>
+    <div id="projets" class="container-fluid">
+      <h2 class="p-5">Projets :</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 p-5"></div>
+      <a>
+        <img src="../public/img/logosite/logodokkan .png" alt="Logo Dokkan Battle France" />
+      </a>
+    </div>
+
+    <footer class="container-fluid bg-dark text-light">
+      <div class="row text-center p-5">
+        <h5>Les Liens Utiles</h5>
+        <div class="dropdown-divider"></div>
+        <p><a href="{{ path('accueil') }}">Accueil</a></p>
+      </div>
+
+      <div class="col-4">
+        <h5>COORDONNÉES</h5>
+        <div class="dropdown-divider"></div>
+        <p>{{ adresse_ville }}</p>
+        <p>{{ ville_habite }} {{ code_postal }}</p>
+        <p>{{ numero_telephone }}</p>
+        <p>{{ adresse_mail }}</p>
+      </div>
+      <div class="col-4 my-auto">
+        <img
+          src="{{ asset('img/logosite/logoportefolio.png') }}"
+          alt="logo portefolio cedric"
+          class="w-50"
+        />
+      </div>
+      <div class="row" id="copyright">
+        <div class="col-12 text-center">
+          <p>{{ copyright }}</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+
+    {% block javascripts %}{% endblock %}
+  </body>
 </html>
